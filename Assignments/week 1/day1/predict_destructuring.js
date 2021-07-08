@@ -52,3 +52,13 @@ console.log(secondKey); //logs [1, 5, 1, 8, 3, 3]
 console.log(secondKey[0]); //logs 1
 console.log(willThisWork);// logs 5
 
+
+setTimeout( function(){console.log("after 3 seconds")} ,3000)
+
+var numberArr = [1,2,3,4,5,6,7,8,9,10]
+
+const checkNum = num => num % 2 === 0
+
+var evenNums = numberArr.filter(checkNum)
+console.log(numberArr)
+console.log(evenNums)
