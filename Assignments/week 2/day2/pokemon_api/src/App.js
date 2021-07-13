@@ -1,5 +1,6 @@
 import './App.css';
-import {useState} from 'react'
+import {useEffect, useState} from 'react';
+import axios from 'axios';
 
 
 function App() {
@@ -8,11 +9,9 @@ function App() {
 
   const handleClick = () => {
     setClicked(true)
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=810")
+    axios.get("https://pokeapi.co/api/v2/pokemon?limit=1000")
           .then(response => {
-            return response.json();
-        }).then(response => {
-          const name = response.results.map(pokemon =>{
+          const name = response.data.results.map(pokemon =>{
             return pokemon.name
           })
           setPokemons([...name])
@@ -21,7 +20,6 @@ function App() {
         });
   }
 
-  
 
   return (
     <div className="App">
