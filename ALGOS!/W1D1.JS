@@ -21,3 +21,11 @@ function bubbleSort(arr){
 
 console.log(bubbleSort(numsRandomOrder))
 console.log(bubbleSort(numsReversed))
+
+
+
+const func = (_=>()=>_++)(![])
+console.log(func())
+console.log(func())
+console.log(func())
+console.log(func())
