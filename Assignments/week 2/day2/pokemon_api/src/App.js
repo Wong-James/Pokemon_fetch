@@ -11,7 +11,7 @@ function App() {
     setClicked(true)
     axios.get("https://pokeapi.co/api/v2/pokemon?limit=1000")
           .then(response => {
-          const name = response.data.results.map(pokemon =>{
+            const name = response.data.results.map(pokemon =>{
             return pokemon.name
           })
           setPokemons([...name])
