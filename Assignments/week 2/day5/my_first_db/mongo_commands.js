@@ -1,9 +1,6 @@
 // use my_first_db
 // switched to db my_first_db
 // show dbs
-// admin   0.000GB
-// config  0.000GB
-// local   0.000GB
 // db.createCollection("students")
 // { "ok" : 1 }
 // show collections
@@ -21,11 +18,11 @@
 // db.students.updateMany({}, {$set: {"interests": ["coding", "brunch", "MongoDB"]}})
 // db.students.update({name: "christian"}, {$push: {"interests": ["Video Games"]}})
 // db.students.update({name: "Justin"}, {$push: {"interests": "raves"}})
-// db.students.update({name: "Brayan"}, {$push: {"interests":"brawlhalla"}})
+// db.students.update({name: "Brayan"}, {$push: {"interests": "brawlhalla"}})
 // db.students.update({name: "Vivian"}, {$push: {"interests": "candles"}})
 // db.students.update({name: "Jane"}, {$push: {"interests": "beaches"}})
 // db.students.update({name: "Jane"}, {$push: {"interests": "taxes"}})
-// db.students.remove({"interests": "taxes"})
+// db.students.update({}, {$pull: {"interests": "taxes"}})
 // db.students.remove({home_state: "California"})
 // db.students.remove({name: "jane"})
 // db.students.deleteOne({lucky_number: {$gt: 5}})
