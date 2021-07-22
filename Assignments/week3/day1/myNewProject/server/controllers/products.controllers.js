@@ -10,8 +10,8 @@ module.exports.findAllProducts = (req, res) => {
 
 module.exports.findOneProduct = (req, res) => {
     Product.findOne({_id: req.params.id})
-        .then(oneProduct => res.json({oneProduct}))
-        .catch(err => res.json({err}))
+        .then(oneProduct => res.json(oneProduct))
+        .catch(err => res.json(err))
 }
 
 
@@ -19,5 +19,5 @@ module.exports.findOneProduct = (req, res) => {
 module.exports.createProduct = (req, res) => {
     Product.create(req.body)
         .then(newProduct => res.json({newProduct}))
-        .catch(err => res.json({err})) 
+        .catch(err => res.status(400).json({err})) 
 }

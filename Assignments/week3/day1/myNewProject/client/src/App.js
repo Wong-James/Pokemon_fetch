@@ -1,9 +1,14 @@
-import CreateProduct from "./components/CreateProduct"
+import {Router} from "@reach/router"
+import HomePage from "./components/HomePage";
+import DisplayOneProduct from "./components/DisplayOneProduct";
 
 function App() {
   return (
-    <div className="App">
-      <CreateProduct/>
+    <div>
+      <Router>
+        <HomePage path="/" />
+        <DisplayOneProduct path="/api/product/:id" />
+      </Router>
     </div>
   );
 }
