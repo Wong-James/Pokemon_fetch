@@ -8,7 +8,7 @@ const HomePage = props => {
   return (
     <div className="App">
       <CreateProduct submitState={submitState} setSubmitState={setSubmitState}/>
-      <DisplayProduct submitState={submitState}/>
+      <DisplayProduct submitState={submitState} setSubmitState={setSubmitState}/>
     </div>
   );
 }

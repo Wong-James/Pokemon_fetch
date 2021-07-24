@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react'
 import axios from "axios"
+import { Link } from "@reach/router"
 
 const DisplayOneProduct = props => {
-    
+
     const {id} = props
 
     const [product, setProduct] = useState({})
@@ -19,6 +20,8 @@ const DisplayOneProduct = props => {
             <h2>Price: ${product.price}</h2>
             <h2>Description:</h2>
             <h3>{product.description}</h3>
+            <Link to="/"><button>Home</button></Link>
+            <Link to={`/api/product/${id}/edit`}><button>Edit</button></Link>
         </div>
     )
 }
